@@ -1,0 +1,88 @@
+
+
+main[role="main"]
+{
+  display: flex;
+  flex-direction: column;
+  background-color: lavenderblush;
+  padding: 2em;
+}
+
+.members-list
+{
+  display: grid;
+  grid-template-columns: 400px 400px;
+  grid-column-gap: 130px;
+  margin-left: 100px;
+  margin-bottom: 10px;
+}
+
+#content-header
+{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: aqua;
+  font-size: 3rem;
+}
+
+section
+{
+  background-color: lavenderblush;
+  margin-bottom: 20px;
+  clear: both;
+  color:#004384;
+  box-shadow: 0 0 10px pink;
+  width: 130%;
+  padding: 5px;
+  border: 1px solid lavenderblush;
+}
+
+.small-image {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.profile-header
+{
+  float: left;
+}
+
+.media-image
+{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+  margin-left: 1px;
+  margin-top: 5px;
+}
+
+.name
+{
+  margin-top: 50px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.title
+{
+  font-style: italic;
+  padding-top: 2px;
+}
+
+.icons
+{
+  margin: 20px;
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #212529; 
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  clear: both;
+}
