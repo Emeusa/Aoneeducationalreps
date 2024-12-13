@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib import admin
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 # Create your models here.
 
@@ -198,7 +199,7 @@ class AoneEducational(models.Model):
 
 
     owner               =         models.ForeignKey(Account, on_delete=models.CASCADE, related_name="formowner", null=True)
-    profile_code        =         models.IntegerField(verbose_name="Profile Code", null=True, blank=True)
+    profile_code        =         models.BigIntegerField(verbose_name="Profile Code", null=True, blank=True)
     last_name           =         models.CharField(max_length=250, verbose_name="Surname")
     first_name          =         models.CharField(max_length=250, verbose_name="First Name")
     middle_name         =         models.CharField(max_length=250, verbose_name="Middle Name")
@@ -210,22 +211,22 @@ class AoneEducational(models.Model):
     madien_name         =         models.CharField(max_length=250, null=True, blank=True, verbose_name="Madien Name (if Married)")
     email               =         models.EmailField(verbose_name="Email")
     contact_add         =         models.CharField(max_length=250, verbose_name="Contact Address")
-    nin                 =         models.IntegerField(verbose_name="NIN")
-    mobile_number       =         models.IntegerField(verbose_name="Mobile Number")
+    nin                 =         models.BigIntegerField(verbose_name="NIN")
+    mobile_number       =         models.BigIntegerField(verbose_name="Mobile Number")
     nationality         =         models.CharField("Nationality", max_length=250, default=nation)
     state_of_origin     =         models.CharField(max_length=50, choices=states_ch, verbose_name="State of Origin")
     local_gov           =         models.CharField("L.G.A", max_length=250)
     parent_name         =         models.CharField("Parent Name", max_length=250)
     occupation          =         models.CharField("Occupation", max_length=250)
     office_add          =         models.CharField("Office Address", max_length=250)
-    phone_no            =         models.IntegerField(verbose_name="Parent Phone Number")
+    phone_no            =         models.BigIntegerField(verbose_name="Parent Phone Number")
     parent_mail         =         models.EmailField(verbose_name="Parent Email Address")
     alevel_pro          =         models.CharField(max_length=200, verbose_name="Exams Type", choices=exam_type, default=False)
     prefered_ex_state   =         models.CharField(max_length=50, choices=states_ch, verbose_name="Prefered state of exam", blank=True, null=True)
     exam_town           =         models.CharField("Exams Town", max_length=250, blank=True, null=True)
-    first_choices       =         models.CharField("1st Institution", max_length=250)
+    first_choices       =         models.CharField("first Institution", max_length=250)
     programme_one       =         models.CharField("Programme of study", max_length=250)
-    second_choices      =         models.CharField("2nd Institution", max_length=250)
+    second_choices      =         models.CharField("second Institution", max_length=250)
     programme_two       =         models.CharField("Programme of study", max_length=250)
     utme_sub_one        =         models.CharField(max_length=200, choices=sub_choices, verbose_name="UTME subject 1", blank=True, null=True)
     utme_sub_two        =         models.CharField(max_length=200, choices=sub_choices, verbose_name="UTME subject 2", blank=True, null=True)
@@ -235,10 +236,14 @@ class AoneEducational(models.Model):
     exam_type           =         models.CharField(max_length=200, choices=exam_type, verbose_name="Exam type")
     reg_mode            =         models.CharField(max_length=200, choices=school_choice, verbose_name="how did you register for examination", blank=True, null=True)
     yr_of_exam          =         models.IntegerField(verbose_name="Exam Year", blank=True, null=True)
-    serial_no           =         models.IntegerField(verbose_name="Serial Number", blank=True, null=True)
-    pin_no              =         models.IntegerField(verbose_name="Pin", blank=True, null=True)
-    exam_no             =         models.IntegerField(verbose_name="Exam Number", blank=True, null=True)
-    num_of_sit          =         models.IntegerField(verbose_name="Number of Sittings", blank=True, null=True)
+    serial_no           =         models.BigIntegerField(verbose_name="Serial Number", blank=True, null=True)
+    pin_no              =         models.BigIntegerField(verbose_name="Pin", blank=True, null=True)
+    exam_no             =         models.BigIntegerField(verbose_name="Exam Number", blank=True, null=True)
+    num_of_sit          =         models.IntegerField(verbose_name="Number of Sittings", blank=True, null=True, default=1,
+        validators=[
+            MaxValueValidator(2),
+            MinValueValidator(1)
+        ])
 
     olevel_sub_one      =         models.CharField(max_length=200, choices=sub_choices, verbose_name="O'Level Subject 1")
     grade1              =         models.CharField(max_length=200, choices=grade_choices, verbose_name="grade", blank=True, null=True)
