@@ -27,8 +27,14 @@ SECRET_KEY = 'django-insecure-7_v19&fvc($ez@8^0mpts0n*00y!@47y5o+_q9gm72xa*6h+uv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    ".railway.app"
+]
+if DEBUG:
+    ALLOWED_HOSTS +=[
+        "127.0.0.1",
+        "localhost"
+    ]
 
 AUTH_USER_MODEL = "aonewebs.Account"
 AUTHENTICATION_BACKENDS = (
