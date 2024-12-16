@@ -163,7 +163,7 @@ class AoneEducational(models.Model):
     Yoruba                          = "Yoruba"
 
 
-    sub_choices = {Use_of_English_Language:"Use of English Language", english_language:"English Language", Mathematics:"Mathematics", Physics:"Physics", Chemistry:"Chemistry", Computer_Studies:"Computer Studies", Physical_Health_Education:"Physical Health Education", Literature_in_English:"Literature in English", Home_Economics:"Home Economics", History:"History", Hausa:"Hausa", Government:"Government", Geography:"Geography", Economics:"Economics", Christain_Religious_Education:"Christain Religious Education", Commerce:"Commerce", Biology:"Biology", Agricultural_Science:"Agricultural Science", Accounting:"Accounting", French:"French", Arabic:"Arabic", Yoruba:"Yoruba"}
+    sub_choices = {Use_of_English_Language:"Use of English Language", english_language:"English Language", Mathematics:"Mathematics", Physics:"Physics", Chemistry:"Chemistry", Computer_Studies:"Computer Studies", Physical_Health_Education:"Physical Health Education", Literature_in_English:"Literature in English", Home_Economics:"Home Economics", History:"History", Hausa:"Hausa", Government:"Government", Geography:"Geography", Economics:"Economics", Christain_Religious_Education:"Christain Religious Education", Commerce:"Commerce", Biology:"Biology", Agricultural_Science:"Agricultural Science", Accounting:"Accounting", French:"French", Arabic:"Arabic", Yoruba:"Yoruba", civic_education:"Civic Education"}
 
     aone    = "A1"
     btwo    = "B2"
