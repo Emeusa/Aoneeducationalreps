@@ -42,13 +42,8 @@ else:
     DEBUG = False
 
 ALLOWED_HOSTS = [
-    ".railway.app"
+    "*"
 ]
-if DEBUG:
-    ALLOWED_HOSTS +=[
-        "127.0.0.1",
-        "localhost"
-    ]
 
 AUTH_USER_MODEL = "aonewebs.Account"
 AUTHENTICATION_BACKENDS = (
