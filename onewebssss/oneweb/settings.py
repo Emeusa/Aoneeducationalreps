@@ -42,7 +42,7 @@ else:
     DEBUG = False
 
 ALLOWED_HOSTS = [
-    "*"
+    "*", "8080"
 ]
 
 AUTH_USER_MODEL = "aonewebs.Account"
