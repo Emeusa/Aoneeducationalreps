@@ -9,8 +9,12 @@ https://docs.djangoproject.com/en/5.1/howto/deployment/wsgi/
 
 import os, sys
 
+sys.path.append('/Aoneeducationalreps/onewebssss/oneweb')
+sys.path.append('/onewebssss/oneweb/')
+sys.path.append('/oneweb/')
+
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'oneweb.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'onewebssss.oneweb.settings')
 
 application = get_wsgi_application()
