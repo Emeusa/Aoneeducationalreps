@@ -81,16 +81,21 @@
         </ul>
           {% else %}
         <ul class="navbar-nav ms-auto gap-2 mt-lg-0 mt-3">
+          {% block loginone %}
           <li>
             <button type="submit" class="btn btn-primary">
               <a class="nav-link text-white fw-bolder" href="/login"> LOGIN</a>
             </button>
           </li>
+          {% endblock %}
+
+          {% block sigupone %}
           <li>
             <button type="submit" class="btn btn-primary">
               <a class="nav-link text-white fw-bolder" href="/register">SIGNUP</a>
             </button>
           </li>
+          {% endblock %}
         </ul>
         {% endif %}
         </form>
