@@ -8,6 +8,30 @@
 
 
 
+<div class="container-xxl bg-light mg-0 mt-5">
+    <div class="container-xl bg-light mr-lg-5 pt-5 mt-5 align-items-center justify-content-center shadow-lg rounded" style="color: #008080;">
+
+        <h1 class="text-center mb-4">A1 EDUCATIONAL..</h1>
+
+        <div class="container">
+            <video onclick="play(event)" src="{% static 'videos\A1 Advert.mp4' %}" id="video"></video>
+            <div class="controls">
+                <button onclick="play(event)"><i class="fa fa-play"></i><i class="fa fa-pause"></i></button>
+                <button onclick="rewind(event)"><i class="fa fa-fast-backward"></i></button>
+                <div class="timeline">
+                    <div class="bar">
+                        <div class="inner"></div>
+                    </div>
+                </div>
+                <button onclick="forward(event)"><i class="fa fa-fast-forward"></i></button>
+                <button onclick="fullScreen(event)"><i class="fa fa-expand"></i></button>
+                <button onclick="download(event)"><i class="fa fa-cloud-download"></i></button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
             <h2 id="content-header">
                 Meet the Team
             </h2>
@@ -66,7 +90,7 @@
                             Ikeri Monica
                         </div>
                         <div class="title personality">
-                            Professional Educationist in Biology
+                            Biology
                         </div>
                 </div>
                 <div class="col-6 shadow">
@@ -93,7 +117,7 @@
                         Thompson Samuel
                     </div>
                     <div class="title personality">
-                        Head of Engineering
+                        Engineering
                     </div>
                 </div>
                 <div class="col-6 shadow">
@@ -109,27 +133,15 @@
                         Head of Science
                     </div>
                 </div>
-                <div class="col-6 shadow">
-                    <div class="profile8">
-                        <div class="profile-header">
-                            <img src="{% static 'images/d7.jpg' %}" class="media-image" alt="Graphic Designer">
-                        </div>
-                    </div>
-                    <div class="name">
-                        Stanley Madabuchi
-                    </div>
-                    <div class="title personality">
-                        Graphic Designer
-                    </div>
-                </div>
+        
                 <div class="col-6 shadow">
                     <div class="profile9">
                         <div class="profile-header">
-                            <img src="{% static 'images/d7.jpg' %}" class="media-image" alt="Web Developer">
+                            <img src="{% static 'images/eme.jpg' %}" class="media-image" alt="Web Developer">
                         </div>
                     </div>
                     <div class="name">
-                        Chukwuemeka Olobi-Isiolu
+                        Emediong Stephen Peter
                     </div>
                     <div class="title personality">
                         Web Developer
@@ -138,7 +150,7 @@
                 <div class="col-6 shadow">
                     <div class="profile10">
                         <div class="profile-header">
-                            <img src="{% static 'images/d7.jpg' %}" class="media-image" alt="Assistant Web Developer">
+                            <img src="{% static 'images/asi.jpg' %}" class="media-image" alt="Assistant Web Developer">
                         </div>
                     </div>
                     <div class="name">
@@ -148,19 +160,7 @@
                         Asst. Web Developer
                     </div>
                 </div>
-                <div class="col-6 shadow">
-                    <div class="profile11">
-                        <div class="profile-header">
-                            <img src="{% static 'images/d7.jpg' %}" class="media-image" alt="Educationist">
-                        </div>
-                    </div>
-                    <div class="name">
-                        Austin Noble
-                    </div>
-                    <div class="title personality">
-                        Professional Educationist in Physics
-                    </div>
-                </div>
+                
                 <div class="col-6 shadow">
                     <div class="profile12">
                         <div class="profile-header">
